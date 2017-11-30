@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        document.documentElement.style.fontSize = window.innerWidth / 375 * 50 + 'px';
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <div class="solid">
+                <i>北京</i>
+                <input type="text" placeholder="搜说您想要的车">
+                <i>菜单</i>
+            </div>
+            <div class="nav">
+                <ul class="list">
+                    <li>智能排序</li>
+                    <li>品牌</li>
+                    <li>价格</li>
+                    <li>筛选</li>
+                    <li>报买车</li>
+                </ul>
+            </div>
+        </header>
+        <section class="section">
+            <ul class="clUl">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </section>
+    </div>
+</body>
+<script src="js/jquery.js"></script>
+<script>
+    $('.list li').click(function () {
+        $('.clUl').css('left', -$(this).index() * $('.wrap').width())
+    });
+</script>
+</html>
